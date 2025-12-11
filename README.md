@@ -17,7 +17,19 @@
 
 ---
 
-## 🎯 O que é?
+## � Demonstração
+
+<div align="center">
+
+![Bot em funcionamento](.github/assets/demo.gif)
+
+*Bot respondendo menu interativo, exibindo catálogo de produtos e bloqueio do módulo IA*
+
+</div>
+
+---
+
+## �🎯 O que é?
 
 **Bot profissional de WhatsApp** com Catálogo de Produtos (GRÁTIS) + módulo IA opcional (R$ 29,90). Script completo, documentado e pronto para instalar no seu servidor.
 

@@ -35,8 +35,11 @@ const CATALOG_INTENT_KEYWORDS = [
 
 let socketRef = null;
 
-export function initRouter(sock) {
-  socketRef = sock;
+// Armazena contexto da última interação de cada usuário
+const userContexts = new Map();
+
+export function initRouter(socket) {
+  socketRef = socket;
 
   global.sendWhatsApp = async (chatId, texto, opcoes = {}) => {
     if (!socketRef) {
@@ -114,8 +117,13 @@ export async function handleIncomingMessage({ from, message }) {
 
   const normalized = normalizeText(text);
 
+  // Recupera contexto do usuário (última ação)
+  const lastContext = userContexts.get(from) || 'menu';
+  logger.debug({ from, lastContext, message: text }, '📍 Contexto atual');
+
   // 1. ATALHO GLOBAL: Detecta palavras-chave para voltar ao menu (funciona em qualquer momento)
   if (matchesMenu(normalized)) {
+    userContexts.set(from, 'menu'); // Reseta contexto
     await global.sendWhatsApp(from, WELCOME_MESSAGE);
     logger.info({ from }, '🔙 Retorno ao menu solicitado.');
     return;
@@ -123,6 +131,7 @@ export async function handleIncomingMessage({ from, message }) {
 
   // 2. ATALHO GLOBAL: Detecta solicitação de atendente humano (funciona em qualquer momento)
   if (matchesHuman(normalized)) {
+    userContexts.set(from, 'menu'); // Reseta contexto
     await transferToHuman(from);
     logger.info({ from }, '👤 Transferência para humano solicitada.');
     return;
@@ -130,6 +139,7 @@ export async function handleIncomingMessage({ from, message }) {
 
   // 3. Detecta "0" para voltar ao menu principal
   if (normalized === '0') {
+    userContexts.set(from, 'menu'); // Reseta contexto
     await global.sendWhatsApp(from, WELCOME_MESSAGE);
     logger.info({ from }, 'Retorno ao menu principal solicitado via "0".');
     return;
@@ -137,20 +147,46 @@ export async function handleIncomingMessage({ from, message }) {
 
   // 4. Detecta saudações e envia menu inicial
   if (matchesGreeting(normalized)) {
+    userContexts.set(from, 'menu'); // Define contexto como menu
     logger.info({ from, normalized }, '✅ Saudação detectada! Enviando menu...');
     await global.sendWhatsApp(from, WELCOME_MESSAGE);
     logger.info({ from }, '📋 Menu inicial enviado com sucesso!');
     return;
   }
 
-  // 5. Opção "1" → IA
+  // 5. SE CONTEXTO = CATALOG: Números de 1-99 são IDs de produtos
+  if (lastContext === 'catalog') {
+    const productId = extractProductId(text);
+    if (productId) {
+      logger.info({ from, productId, text }, '� ID de produto detectado no contexto catálogo');
+      const license = global.botLicense || null;
+      if (!isModuleActive('catalogo', license)) {
+        logger.warn({ from, productId }, '🔒 Tentativa de acessar produto com módulo bloqueado');
+        const mensagemBloqueio = getModuleBlockedMessage('catalogo', license);
+        await global.sendWhatsApp(from, mensagemBloqueio);
+        return;
+      }
+
+      await sendProductById(from, productId);
+      // Mantém contexto catalog para facilitar navegação entre produtos
+      logger.info({ from, productId }, 'Produto específico enviado.');
+      return;
+    }
+  }
+
+  // 6. SE NÃO ESTÁ NO CONTEXTO CATALOG: Verifica opções do menu (1, 2, 3)
+  // 7. SE NÃO ESTÁ NO CONTEXTO CATALOG: Verifica opções do menu (1, 2, 3)
+  
+  // Opção "1" → IA
   if (normalized === '1') {
+    userContexts.set(from, 'ia'); // Define contexto IA
     // Verifica se módulo IA está ativo
     const license = global.botLicense || null;
     if (!isModuleActive('ia', license)) {
       logger.warn({ from }, '🔒 Tentativa de acessar módulo IA bloqueado');
       const mensagemBloqueio = getModuleBlockedMessage('ia', license);
       await global.sendWhatsApp(from, mensagemBloqueio);
+      userContexts.set(from, 'menu'); // Volta ao menu
       return;
     }
 
@@ -167,14 +203,16 @@ O que você gostaria de saber?`;
     return;
   }
 
-  // 6. Opção "2" → Catálogo
+  // 8. Opção "2" → Catálogo
   if (normalized === '2') {
+    userContexts.set(from, 'catalog'); // Define contexto catálogo
     // Verifica se módulo está ativo
     const license = global.botLicense || null;
     if (!isModuleActive('catalogo', license)) {
       logger.warn({ from }, '🔒 Tentativa de acessar módulo Catálogo bloqueado');
       const mensagemBloqueio = getModuleBlockedMessage('catalogo', license);
       await global.sendWhatsApp(from, mensagemBloqueio);
+      userContexts.set(from, 'menu'); // Volta ao menu
       return;
     }
 
@@ -183,20 +221,23 @@ O que você gostaria de saber?`;
     return;
   }
 
-  // 7. Opção "3" → Atendente humano
+  // 9. Opção "3" → Atendente humano
   if (normalized === '3') {
+    userContexts.set(from, 'menu'); // Reseta contexto
     await transferToHuman(from);
     return;
   }
 
-  // 8. Detecta frases relacionadas a dúvidas → IA
+  // 10. Detecta frases relacionadas a dúvidas → IA
   if (matchesIAIntent(normalized)) {
+    userContexts.set(from, 'ia'); // Define contexto IA
     // Verifica se módulo IA está ativo
     const license = global.botLicense || null;
     if (!isModuleActive('ia', license)) {
       logger.warn({ from }, '🔒 Tentativa de acessar IA por intent bloqueado');
       const mensagemBloqueio = getModuleBlockedMessage('ia', license);
       await global.sendWhatsApp(from, mensagemBloqueio);
+      userContexts.set(from, 'menu'); // Volta ao menu
       return;
     }
 
@@ -205,14 +246,16 @@ O que você gostaria de saber?`;
     return;
   }
 
-  // 9. Detecta frases relacionadas ao catálogo
+  // 10. Detecta frases relacionadas ao catálogo
   if (matchesCatalogIntent(normalized)) {
+    userContexts.set(from, 'catalog'); // Define contexto catálogo
     // Verifica se módulo está ativo
     const license = global.botLicense || null;
     if (!isModuleActive('catalogo', license)) {
       logger.warn({ from }, '🔒 Tentativa de acessar catálogo por intent bloqueado');
       const mensagemBloqueio = getModuleBlockedMessage('catalogo', license);
       await global.sendWhatsApp(from, mensagemBloqueio);
+      userContexts.set(from, 'menu'); // Volta ao menu
       return;
     }
 
@@ -221,33 +264,18 @@ O que você gostaria de saber?`;
     return;
   }
 
-  // 10. Detecta "produto X", "ver X", "item X" ou apenas números de produtos
-  const productId = extractProductId(text);
-  if (productId) {
-    // Verifica se módulo catálogo está ativo
-    const license = global.botLicense || null;
-    if (!isModuleActive('catalogo', license)) {
-      logger.warn({ from, productId }, '🔒 Tentativa de acessar produto com módulo bloqueado');
-      const mensagemBloqueio = getModuleBlockedMessage('catalogo', license);
-      await global.sendWhatsApp(from, mensagemBloqueio);
-      return;
-    }
-
-    await sendProductById(from, productId);
-    logger.info({ from, productId }, 'Produto específico enviado.');
-    return;
-  }
-
-  // 11. Fallback: envia para IA se não corresponder a nenhum fluxo
+  // 12. Fallback: envia para IA se não corresponder a nenhum fluxo
   const license = global.botLicense || null;
   if (!isModuleActive('ia', license)) {
     logger.warn({ from }, '🔒 Fallback para IA bloqueado - enviando para atendente');
+    userContexts.set(from, 'menu'); // Reseta contexto
     await global.sendWhatsApp(from, `⚠️ Desculpe, não entendi sua mensagem.
 
 Digite *menu* para ver as opções disponíveis ou *atendente* para falar com um humano.`);
     return;
   }
 
+  userContexts.set(from, 'ia'); // Define contexto IA
   await handleIA(text, from);
   logger.info({ from }, 'Mensagem enviada para IA como fallback.');
 }

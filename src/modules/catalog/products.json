@@ -4,22 +4,63 @@
       "id": 1,
       "nome": "Tênis Esportivo",
       "descricao": "Tênis leve com amortecimento responsivo, ideal para corridas e treinos diários.",
+      "descricao_completa": "Tênis desenvolvido com tecnologia de amortecimento EVA de alta densidade, oferecendo conforto máximo e resposta rápida em cada passada. Cabedal em mesh respirável mantém os pés frescos mesmo em treinos intensos. Solado antiderrapante com excelente tração em múltiplas superfícies.",
       "preco": 199.9,
-      "img": "https://via.placeholder.com/600x600.png?text=Tenis+Esportivo"
+      "preco_original": 299.9,
+      "estoque": 15,
+      "categoria": "Calçados",
+      "marca": "SportMax",
+      "tamanhos": ["38", "39", "40", "41", "42", "43"],
+      "cores": ["Preto", "Branco", "Azul"],
+      "avaliacoes": 127,
+      "nota": 4.8,
+      "img": "https://via.placeholder.com/600x600.png?text=Tenis+Esportivo",
+      "imagens_detalhes": [
+        "https://via.placeholder.com/600x600.png?text=Tenis+Frente",
+        "https://via.placeholder.com/600x600.png?text=Tenis+Lateral",
+        "https://via.placeholder.com/600x600.png?text=Tenis+Solado"
+      ]
     },
     {
       "id": 2,
       "nome": "Camiseta DryFit",
       "descricao": "Camiseta com tecnologia DryFit, mantém o corpo seco mesmo em treinos intensos.",
+      "descricao_completa": "Camiseta confeccionada com tecido tecnológico DryFit que absorve o suor e seca rapidamente. Costuras planas evitam atrito e irritação na pele. Design anatômico que acompanha os movimentos do corpo. Proteção UV 50+ para treinos ao ar livre.",
       "preco": 89.5,
-      "img": "https://via.placeholder.com/600x600.png?text=Camiseta+DryFit"
+      "preco_original": 129.9,
+      "estoque": 30,
+      "categoria": "Vestuário",
+      "marca": "FitPro",
+      "tamanhos": ["P", "M", "G", "GG"],
+      "cores": ["Preto", "Branco", "Cinza", "Azul Marinho"],
+      "avaliacoes": 89,
+      "nota": 4.6,
+      "img": "https://via.placeholder.com/600x600.png?text=Camiseta+DryFit",
+      "imagens_detalhes": [
+        "https://via.placeholder.com/600x600.png?text=Camiseta+Frente",
+        "https://via.placeholder.com/600x600.png?text=Camiseta+Costas"
+      ]
     },
     {
       "id": 3,
       "nome": "Garrafa Térmica 1L",
       "descricao": "Mantém bebidas geladas por até 12h e quentes por até 8h. Aço inox com vedação a vácuo.",
+      "descricao_completa": "Garrafa térmica de alto desempenho fabricada em aço inoxidável 304 com dupla parede e isolamento a vácuo. Tampa de rosca com vedação de silicone que impede 100% dos vazamentos. Design ergonômico com alça embutida para transporte fácil. Livre de BPA e ftalatos. Capacidade de 1000ml.",
       "preco": 79.0,
-      "img": "https://via.placeholder.com/600x600.png?text=Garrafa+Termica"
+      "preco_original": 119.9,
+      "estoque": 42,
+      "categoria": "Acessórios",
+      "marca": "ThermoLife",
+      "tamanhos": ["1L"],
+      "cores": ["Inox", "Preto Fosco", "Azul", "Rosa"],
+      "avaliacoes": 203,
+      "nota": 4.9,
+      "img": "https://via.placeholder.com/600x600.png?text=Garrafa+Termica",
+      "imagens_detalhes": [
+        "https://via.placeholder.com/600x600.png?text=Garrafa+Completa",
+        "https://via.placeholder.com/600x600.png?text=Tampa+Detalhe",
+        "https://via.placeholder.com/600x600.png?text=Cores+Disponiveis"
+      ]
     }
   ]
 }

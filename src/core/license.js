@@ -279,7 +279,17 @@ export function getModuleBlockedMessage(moduleId, license) {
   const info = getModuleInfo(moduleId, license);
   
   if (!info) {
-    return '⚠️ Módulo não disponível nesta versão.';
+    logger.warn(`getModuleBlockedMessage: módulo "${moduleId}" não encontrado na licença`);
+    return `⚠️ *Módulo Indisponível*
+
+Este módulo não está disponível nesta versão.
+
+*💰 ADQUIRA AGORA:*
+🛒 https://seu-link-de-vendas.com
+
+*💬 DÚVIDAS?*
+📱 WhatsApp: https://wa.me/5511999999999
+📧 Email: contato@seuemail.com`;
   }
 
   return `🔒 *Módulo Bloqueado*
@@ -287,13 +297,19 @@ export function getModuleBlockedMessage(moduleId, license) {
 📦 *${info.nome}*
 ${info.descricao}
 
-💡 Este módulo não está ativo em sua licença.
+💡 Este módulo requer ativação.
 
-Para ativar, visite:
-👉 [SEU_SITE_DE_VENDAS]
+*💰 ADQUIRA AGORA:*
+🛒 https://seu-link-de-vendas.com/modulo-${moduleId}
 
-Ou entre em contato:
-📱 WhatsApp: (XX) XXXXX-XXXX`;
+*💬 DÚVIDAS?*
+📱 WhatsApp: https://wa.me/5511999999999
+📧 Email: contato@seuemail.com
+
+*✨ Após a compra você receberá:*
+✅ Código completo do módulo
+✅ Instruções de instalação
+✅ Suporte por 30 dias`;
 }
 
 // Exporta tudo de uma vez

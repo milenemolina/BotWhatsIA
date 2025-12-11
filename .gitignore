@@ -56,3 +56,7 @@ tmp/
 # PM2
 .pm2/
 pm2.log
+test-automatizado.js
+test-contexto.js
+test-produto.js
+MELHORIAS.md

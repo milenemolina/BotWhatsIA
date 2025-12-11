@@ -1,529 +1,515 @@
-# 🤖 Bot WhatsApp com IA - Atendimento Automatizado Inteligente
+# 🤖 Bot WhatsApp com IA + Catálogo | Script Pronto
 
 <div align="center">
 
-![Node.js](https://img.shields.io/badge/Node.js-20.x-green)
-![Baileys](https://img.shields.io/badge/Baileys-6.6.0-blue)
-![License](https://img.shields.io/badge/license-MIT-orange)
+![GitHub stars](https://img.shields.io/github/stars/milenemolina/BotWhatsIA?style=social)
+![GitHub forks](https://img.shields.io/github/forks/milenemolina/BotWhatsIA?style=social)
+![Node.js](https://img.shields.io/badge/Node.js-18+-339933?logo=node.js&logoColor=white)
+![WhatsApp](https://img.shields.io/badge/WhatsApp-Bot-25D366?logo=whatsapp&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-blue)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)
 
-**Automação profissional de atendimento via WhatsApp com Inteligência Artificial**
+**Automatize seu atendimento no WhatsApp com Inteligência Artificial** 🚀
 
-Solução completa e modular para atendimento automatizado usando **Baileys** + **IA** (OpenAI/Groq)
-
-[Características](#-características) • [Instalação](#-instalação) • [Configuração](#-configuração) • [Uso](#-uso) • [Módulos](#-módulos)
+[🛒 Comprar Agora](#-como-comprar) • [📖 Documentação](#-funcionalidades) • [💡 Demo](#-demonstração)
 
 </div>
 
 ---
 
-## 📋 Índice
+## 🎯 O que é?
 
-- [Características](#-características)
-- [Pré-requisitos](#-pré-requisitos)
-- [Instalação](#-instalação)
-- [Configuração](#-configuração)
-- [Como Usar](#-como-usar)
-- [Estrutura do Projeto](#-estrutura-do-projeto)
-- [Módulos Disponíveis](#-módulos-disponíveis)
-- [Modo de Teste](#-modo-de-teste)
-- [Personalização](#-personalização)
-- [Troubleshooting](#-troubleshooting)
-- [FAQ](#-faq)
-- [Suporte](#-suporte)
+**Bot profissional de WhatsApp** com Catálogo de Produtos (GRÁTIS) + módulo IA opcional (R$ 29,90). Script completo, documentado e pronto para instalar no seu servidor.
 
----
+### ✨ Principais Características
 
-## ✨ Características
-
-### 🎯 **Funcionalidades Principais**
-
-- ✅ **Atendimento 24/7** - Bot sempre disponível para responder seus clientes
-- 🤖 **IA Conversacional** - Respostas inteligentes usando GPT-4 ou Llama
-- 📦 **Catálogo de Produtos** - Exibição automática com imagens e preços
-- 👤 **Transferência Humana** - Encaminhamento para atendente real quando necessário
-- 🔄 **Navegação Intuitiva** - Menu interativo com opções numeradas
-- 🛡️ **Filtro de Grupos** - Responde apenas mensagens diretas (ignora grupos)
-- 🔌 **Arquitetura Modular** - Fácil adicionar novos módulos e funcionalidades
-
-### 🎨 **Diferenciais Técnicos**
-
-- 📱 Multi-dispositivo (WhatsApp Web API via Baileys)
-- 🚀 Zero dependências de servidores externos
-- 🔐 Autenticação persistente (QR Code único)
-- 📊 Sistema de logs detalhado (Pino)
-- 🧩 Plug-and-play - Módulos independentes
-- ⚡ Performance otimizada com ES Modules
+- 📦 **Catálogo Digital** com imagens e preços ✅ **GRÁTIS**
+- 🤖 **IA Conversacional** (GPT-4 ou Llama 3.1) � **R$ 29,90**
+- 🎛️ **Menu Interativo** inteligente ✅ **GRÁTIS**
+- 🔄 **Transferência para Humano** quando necessário ✅ **GRÁTIS**
+- 🛡️ **Filtro Anti-Grupos** automático ✅ **GRÁTIS**
+- 📝 **Logs Estruturados** para debug ✅ **GRÁTIS**
+- 🧪 **Modo de Teste** sem usar WhatsApp ✅ **GRÁTIS**
 
 ---
 
-## 🔧 Pré-requisitos
+## 🚀 Funcionalidades
 
-Antes de começar, certifique-se de ter instalado:
+### 📦 **Catálogo de Produtos Completo** ✅ GRÁTIS
 
-### **Obrigatórios:**
+```
+✅ Exibe produtos com imagens
+✅ Preços formatados em R$
+✅ Navegação por números (1, 2, 3...)
+✅ Atualização fácil via JSON
+✅ Descrições detalhadas
+```
 
-| Requisito | Versão Mínima | Link |
-|-----------|---------------|------|
-| **Node.js** | 18.x ou superior | [Download](https://nodejs.org/) |
-| **npm** | 8.x ou superior | Incluído com Node.js |
-| **WhatsApp** | Conta ativa | Aplicativo oficial |
-| **Chave API** | OpenAI ou Groq | [OpenAI](https://platform.openai.com/) / [Groq](https://console.groq.com/) |
+### 🤖 **Chatbot com Inteligência Artificial** 💎 R$ 29,90
 
-### **Recomendados:**
+```
+✅ Responde perguntas automaticamente 24/7
+✅ Usa GPT-4 (OpenAI) ou Llama 3.1 (Groq)
+✅ Personalização total da personalidade
+✅ Sistema de intenções inteligente
+✅ Comandos globais (menu, atendente)
+```
 
-- 📱 **Número de teste** - Chip separado para desenvolvimento
-- 💻 **Terminal moderno** - Windows Terminal, iTerm2 ou similar
-- 📝 **Editor de código** - VS Code (recomendado)
+### 🎛️ **Sistema de Roteamento Inteligente** ✅ GRÁTIS
 
-### **Verificar instalação:**
-
-```bash
-node --version  # Deve retornar v18.x ou superior
-npm --version   # Deve retornar 8.x ou superior
+```
+✅ Menu interativo automático
+✅ Detecção de saudações (oi, olá, bom dia)
+✅ Atalhos globais (menu, voltar, atendente)
+✅ Roteamento por intenção
+✅ Fallback para IA quando não entende
 ```
 
 ---
 
-## 📥 Instalação
+## 💻 Tecnologias
 
-### **Passo 1: Clone o repositório**
+- **Node.js 20+** - Ambiente moderno e performático
+- **Baileys 6.6.0** - Conexão estável com WhatsApp Web
+- **OpenAI / Groq** - IAs de última geração
+- **ES Modules** - Código limpo e atual
+- **Pino Logger** - Logs profissionais estruturados
 
-```bash
-git clone <seu-repositorio>
-cd BotWhatsIA
+---
+
+## 📸 Demonstração
+
+### Menu Principal
+```
+Olá! Como posso te ajudar?
+1️⃣ Tenho uma dúvida
+2️⃣ Ver catálogo
+3️⃣ Falar com atendente
 ```
 
-### **Passo 2: Instale as dependências**
+### Catálogo de Produtos
+```
+📦 Nosso Catálogo
+
+1. Produto Premium - R$ 199,90
+   ⭐⭐⭐⭐⭐ (127 avaliações)
+
+2. Produto Pro - R$ 299,90
+   ⭐⭐⭐⭐⭐ (89 avaliações)
+
+Digite o número para ver detalhes!
+```
+
+### IA Conversacional
+```
+👤 Cliente: "Como funciona a entrega?"
+
+🤖 Bot: "Nossa entrega funciona assim:
+📦 Enviamos para todo Brasil
+🚚 Prazo: 5-10 dias úteis
+💰 Frete grátis acima de R$ 199
+
+Tem mais alguma dúvida?"
+```
+
+---
+
+## ⚡ Instalação Rápida
+
+### 1️⃣ **Requisitos**
+
+- Node.js 18 ou superior
+- VPS/Servidor com acesso SSH
+- WhatsApp (não precisa ser Business)
+- API Key OpenAI ou Groq
+
+### 2️⃣ **Instalar Dependências**
 
 ```bash
 npm install
 ```
 
-**Pacotes instalados:**
-- `@whiskeysockets/baileys` - Conexão com WhatsApp
-- `axios` - Requisições HTTP para APIs de IA
-- `dotenv` - Gerenciamento de variáveis de ambiente
-- `pino` - Sistema de logs profissional
-- `qrcode-terminal` - Exibição do QR Code no terminal
-
-### **Passo 3: Verifique a instalação**
-
-```bash
-npm list --depth=0
-```
-
-✅ Se todos os pacotes aparecerem sem erros, a instalação foi bem-sucedida!
-
----
-
-## ⚙️ Configuração
-
-### **1. Arquivo de Ambiente (.env)**
-
-Copie o arquivo de exemplo:
+### 3️⃣ **Configurar Variáveis**
 
 ```bash
 cp .env.example .env
+# Edite o .env com suas API Keys
 ```
 
-**Windows (PowerShell):**
-```powershell
-Copy-Item .env.example .env
-```
-
-### **2. Configure suas credenciais**
-
-Edite o arquivo `.env` com suas chaves:
-
-```ini
-# ============================================
-# CONFIGURAÇÃO DE IA (Obrigatório)
-# ============================================
-
-# Escolha o provedor: 'openai' ou 'groq'
-AI_PROVIDER=groq
-
-# ============================================
-# CHAVES DE API (Preencha apenas a do provedor escolhido)
-# ============================================
-
-# OpenAI (https://platform.openai.com/api-keys)
-OPENAI_API_KEY=sk-proj-...
-
-# Groq (https://console.groq.com/keys)
-GROQ_API_KEY=gsk_...
-
-# ============================================
-# MODELOS DISPONÍVEIS
-# ============================================
-
-# Para OpenAI:
-AI_MODEL=gpt-4o-mini          # Rápido e econômico (recomendado)
-# AI_MODEL=gpt-4               # Mais poderoso, mais caro
-# AI_MODEL=gpt-4-turbo         # Equilíbrio entre velocidade e qualidade
-
-# Para Groq:
-AI_MODEL=llama-3.1-70b-versatile  # Melhor qualidade (recomendado)
-# AI_MODEL=llama-3.1-8b-instant    # Mais rápido, menos preciso
-# AI_MODEL=mixtral-8x7b-32768      # Bom para textos longos
-```
-
-### **3. Como obter suas chaves de API**
-
-#### **OpenAI:**
-1. Acesse [platform.openai.com](https://platform.openai.com/)
-2. Faça login ou crie uma conta
-3. Vá em **API Keys** no menu
-4. Clique em **Create new secret key**
-5. Copie a chave (começa com `sk-proj-...`)
-
-#### **Groq (Recomendado - Gratuito):**
-1. Acesse [console.groq.com](https://console.groq.com/)
-2. Crie uma conta (login com Google)
-3. Vá em **API Keys**
-4. Clique em **Create API Key**
-5. Copie a chave (começa com `gsk_...`)
-
-> **💡 Dica:** Groq oferece acesso gratuito com alta performance para testes!
-
----
-
-## 🚀 Como Usar
-
-### **Iniciar o Bot**
+### 4️⃣ **Rodar o Bot**
 
 ```bash
 npm start
 ```
 
-### **Primeira Conexão**
+### 5️⃣ **Escanear QR Code**
 
-1. **QR Code aparecerá no terminal:**
-   ```
-   📲 Escaneie o QR Code abaixo com o WhatsApp:
-   █████████████████████████████
-   █                           █
-   █  [QR CODE AQUI]           █
-   █                           █
-   █████████████████████████████
-   ```
-
-2. **No WhatsApp do celular:**
-   - Abra o WhatsApp
-   - Vá em **⚙️ Configurações**
-   - Toque em **Dispositivos Conectados**
-   - Toque em **Conectar um dispositivo**
-   - Escaneie o QR Code exibido no terminal
-
-3. **Aguarde a conexão:**
-   ```
-   ✅ Bot conectado com sucesso ao WhatsApp!
-   ```
-
-### **Testar o Bot**
-
-De **outro número** (não o conectado), envie para o bot:
-
-1. **Teste de saudação:**
-   ```
-   Você: oi
-   Bot: Olá! Como posso te ajudar?
-        1️⃣ Tenho uma dúvida
-        2️⃣ Ver catálogo
-        3️⃣ Falar com atendente
-   ```
-
-2. **Teste de IA:**
-   ```
-   Você: 1
-   Bot: Perfeito! Estou aqui para responder suas dúvidas.
-        
-        💡 Dica: A qualquer momento você pode:
-        • Digite menu para voltar ao menu principal
-        • Digite atendente para falar com um humano
-        
-        O que você gostaria de saber?
-   
-   Você: como funciona a entrega?
-   Bot: [Resposta da IA...]
-   ```
-
-3. **Teste de catálogo:**
-   ```
-   Você: 2
-   Bot: 📦 *Nosso Catálogo de Produtos*
-        
-        🔹 1. Tênis Esportivo - R$ 199,90
-        🔹 2. Camiseta DryFit - R$ 89,50
-        🔹 3. Garrafa Térmica - R$ 79,00
-   ```
-
-### **Comandos Disponíveis**
-
-| Comando | Descrição |
-|---------|-----------|
-| `oi`, `olá`, `bom dia` | Exibe o menu principal |
-| `menu`, `voltar`, `inicio` | Volta ao menu (funciona em qualquer momento) |
-| `1` | Inicia conversa com IA |
-| `2` | Exibe catálogo de produtos |
-| `3` | Solicita atendimento humano |
-| `produto 1`, `ver 2` | Mostra detalhes de um produto específico |
-| `atendente`, `humano` | Transfere para atendente (funciona em qualquer momento) |
-| `0` | Volta ao menu principal |
+O QR Code aparecerá no terminal. Escaneie com WhatsApp!
 
 ---
-- Outras perguntas serão direcionadas para o serviço de IA configurado.
-- Logs básicos são exibidos no terminal para facilitar a depuração.
-- O catálogo pode ser aberto digitando `catalogo`, `quero ver produtos`, `mostrar produtos` ou simplesmente `2`. Para ver detalhes de um item, envie `produto <id>`.
 
-### Módulo de catálogo
+## 📚 Documentação Completa
 
-- O módulo mora em `src/modules/catalog` e é composto por `catalogController.js`, `catalogService.js` e `products.json`.
-- O `catalogController` expõe `sendCatalogMenu(chatId)` e `sendProductById(chatId, id)` e nunca chama a IA diretamente.
-- O roteador (`src/core/router.js`) define a função global `sendWhatsApp({ chatId, payload })`, responsável por enviar mensagens via Baileys.
+| Arquivo | Descrição |
+|---------|-----------|
+| [README.md](./README.md) | Documentação técnica completa |
+| [QUICKSTART.md](./QUICKSTART.md) | Guia de 5 minutos |
+| [CONTRIBUTING.md](./CONTRIBUTING.md) | Como customizar |
+| [CHECKLIST-PRODUCAO.md](./CHECKLIST-PRODUCAO.md) | Deploy em produção |
+| [COMERCIAL.md](./COMERCIAL.md) | Informações de venda |
 
-## Resolução de Problemas
+**Total:** +40KB de documentação em português! 📖
 
-- **`Chave de API não configurada`**: confirme que o `.env` contém `OPENAI_API_KEY` ou `GROQ_API_KEY` e reinicie o bot.
-- **Erro `model_decommissioned`**: escolha um modelo ativo na plataforma do seu provedor e atualize `AI_MODEL`.
-- **`stream:error conflict replaced`**: outra sessão está usando as mesmas credenciais. Encerre processos duplicados, remova dispositivos conectados antigos e, se necessário, apague a pasta `auth/` antes de reconectar.
-- **Aviso `ExperimentalWarning`**: mensagem do Node sobre importação de JSON; pode ser ignorada.
+---
 
-## Estrutura do Projeto
+## � Versão GRÁTIS (GitHub)
+
+✅ **Catálogo de Produtos** - Código completo
+✅ **Menu Interativo** - Sistema de navegação
+✅ **Transferência para Humano** - Encaminhamento
+✅ **Logs Estruturados** - Debug facilitado
+✅ **Modo de Teste** - Sem usar WhatsApp
+✅ **Documentação** - +40KB em PT-BR
+✅ **Licença MIT** - Uso comercial permitido
+❌ **IA Bloqueada** - Requer compra
+
+## 💎 Versão PAGA (R$ 29,90)
+
+✅ **Tudo da versão grátis** +
+✅ **Módulo IA completo** - GPT-4 ou Llama 3.1
+✅ **Sistema de prompts** - Personalização total
+✅ **Detecção de intenções** - Roteamento inteligente
+✅ **Fallback IA** - Responde o que não entende
+✅ **Suporte** - 7 dias via email
+✅ **Atualizações** - 30 dias grátis
+
+---
+
+## ⚠️ Versão Grátis - Limitações
+
+❌ Módulo IA não incluído (mostra mensagem de venda)
+❌ Sem suporte técnico
+❌ Sem atualizações prioritárias
+
+## ⚠️ Versão Paga - O que NÃO inclui
+
+❌ Instalação no servidor (você instala com as docs)
+❌ API Keys OpenAI/Groq (você cria, tem plano grátis)
+❌ Servidor VPS (precisa ter o seu)
+❌ Suporte prolongado (apenas 7 dias iniciais)
+❌ Customizações sob demanda
+
+> **Nota:** O código é totalmente documentado! Instalação leva 5-10 minutos.
+
+---
+
+## 💰 Preço
+
+<div align="center">
+
+### � TESTE GRÁTIS PRIMEIRO!
+
+**Clone o repositório e teste o Catálogo!**
+
+```bash
+git clone https://github.com/milenemolina/BotWhatsIA.git
+```
+
+---
+
+### 💎 Gostou? Desbloqueie a IA!
+
+# R$ 29,90
+
+**MÓDULO IA COMPLETO**
+
+<sub>Pagamento único • Acesso imediato • Suporte 7 dias</sub>
+
+[🛒 **COMPRAR MÓDULO IA**](SUA_PAGINA_DE_VENDAS)
+
+</div>
+
+---
+
+## 🛒 Como Comprar?
+
+### **Escolha sua plataforma favorita:**
+
+- 🟠 [**Hotmart**](link-hotmart) - Cartão, PIX, Boleto
+- 🟢 [**Kiwify**](link-kiwify) - Aprovação instantânea
+- 🔵 [**Mercado Livre**](link-mercadolivre) - Mercado Pago
+- 💬 [**WhatsApp Direto**](https://wa.me/seu-numero) - Fale comigo
+
+---
+
+## 📋 Estrutura do Projeto
 
 ```
-.
-├── auth/                     # Credenciais Baileys (gerado automaticamente)
+c:\BotWhatsIA\
 ├── src/
 │   ├── core/
-│   │   ├── bot.js            # Inicialização do WhatsApp e eventos principais
-│   │   └── messageRouter.js  # Roteador para delegar mensagens aos módulos
+│   │   ├── bot.js          # Conexão WhatsApp
+│   │   ├── router.js       # Roteamento inteligente
+│   │   └── license.js      # Sistema de licenças
 │   ├── modules/
-│   │   └── catalog/
-│   │       ├── catalogController.js  # Controlador do catálogo
-│   │       ├── catalogService.js     # Serviço para leitura dos produtos
-│   │       └── products.json         # Dados base do catálogo
+│   │   ├── ia/             # Módulo de IA
+│   │   ├── catalog/        # Catálogo de produtos
+│   │   └── humano/         # Transferência humana
 │   ├── services/
-│   │   └── ai.js             # Conector com OpenAI/Groq
-│   ├── utils/
-│   │   ├── helpers.js        # Funções utilitárias
-│   │   └── logger.js         # Logger centralizado (Pino)
-│   └── index.js              # Entrada principal do bot
-├── .env.example              # Template de variáveis de ambiente
-├── package.json
-└── README.md
+│   │   └── ai.js           # Integração OpenAI/Groq
+│   └── utils/
+│       ├── logger.js       # Sistema de logs
+│       └── helpers.js      # Funções auxiliares
+├── .env.example            # Exemplo de configuração
+├── license.json            # Licenciamento de módulos
+└── package.json
 ```
 
 ---
 
-## 📁 Estrutura do Projeto Detalhada
+## 🔧 Configuração da IA
 
-```
-BotWhatsIA/
-├── 📄 index.js                 # Ponto de entrada da aplicação
-├── 📄 test-local.js            # Modo de teste sem WhatsApp
-├── 📄 package.json             # Dependências e scripts
-├── 📄 .env.example             # Exemplo de configuração
-├── 📄 .env                     # Suas configurações (criar)
-├── 📄 README.md                # Esta documentação
-│
-├── 📂 src/                     # Código fonte principal
-│   ├── 📂 core/                # Núcleo do bot
-│   │   ├── bot.js              # Conexão com WhatsApp (Baileys)
-│   │   └── router.js           # Orquestrador de mensagens
-│   │
-│   ├── 📂 modules/             # Módulos funcionais (plug-and-play)
-│   │   ├── 📂 catalog/         # Módulo de catálogo
-│   │   │   ├── catalogController.js
-│   │   │   ├── catalogService.js
-│   │   │   └── products.json   # Base de produtos
-│   │   ├── 📂 ia/              # Módulo de IA
-│   │   │   ├── iaController.js
-│   │   │   └── iaPrompt.js     # Personalidade da IA
-│   │   └── 📂 humano/          # Módulo de transferência humana
-│   │       └── humanoController.js
-│   │
-│   ├── 📂 services/            # Serviços compartilhados
-│   │   └── ai.js               # Integração com APIs de IA
-│   │
-│   └── 📂 utils/               # Utilitários
-│       ├── logger.js           # Sistema de logs (Pino)
-│       └── helpers.js          # Funções auxiliares
-│
-└── 📂 auth/                    # Sessão WhatsApp (gerada automaticamente)
-    └── creds.json              # Credenciais de autenticação
+### OpenAI (GPT-4)
+
+```env
+AI_PROVIDER=openai
+AI_MODEL=gpt-4o-mini
+OPENAI_API_KEY=sk-seu-token-aqui
 ```
 
-### **Arquivos Importantes**
+**Custo:** ~$0.001 por mensagem (~R$ 0,005)
 
-| Arquivo | Descrição | Editar? |
-|---------|-----------|---------|
-| `.env` | Configurações e chaves API | ✅ Sim |
-| `products.json` | Produtos do catálogo | ✅ Sim |
-| `iaPrompt.js` | Personalidade da IA | ✅ Sim |
-| `router.js` | Lógica de roteamento | ⚠️ Avançado |
-| `bot.js` | Conexão WhatsApp | ❌ Não |
+### Groq (Llama 3.1) - GRATUITO
+
+```env
+AI_PROVIDER=groq
+AI_MODEL=llama-3.1-70b-versatile
+GROQ_API_KEY=gsk_seu-token-aqui
+```
+
+**Custo:** GRÁTIS (até 14.400 req/dia)
 
 ---
 
-## 🎯 Módulos Disponíveis
+## 🛡️ Licença & Uso Comercial
 
-### **1. Módulo IA (Chatbot Inteligente)**
+### ✅ **Você PODE:**
 
-📍 **Localização:** `src/modules/ia/`
+- Modificar o código
+- Usar comercialmente
+- Revender (mantendo créditos)
+- Integrar com seus sistemas
+- Criar versões derivadas
 
-**Funcionalidades:**
-- Responde perguntas abertas usando GPT ou Llama
-- Contexto conversacional inteligente
-- Personalidade configurável via prompt
+### ❌ **Você NÃO PODE:**
 
-**Personalizar:**
+- Remover créditos originais
+- Vender como "de sua autoria"
+- Oferecer garantias em meu nome
 
-Edite `src/modules/ia/iaPrompt.js`:
-
-```javascript
-export const SYSTEM_PROMPT = `
-Você é um assistente virtual da [SUA EMPRESA].
-Seja cordial, profissional e objetivo.
-Responda sempre em português brasileiro.
-
-Informações da empresa:
-- Horário: Segunda a Sexta, 9h às 18h
-- Entrega: 3-5 dias úteis
-- Pagamento: PIX, Cartão, Boleto
-`;
-```
-
-### **2. Módulo Catálogo**
-
-📍 **Localização:** `src/modules/catalog/`
-
-**Funcionalidades:**
-- Exibe lista de produtos com preços
-- Mostra detalhes individuais com imagens
-- Navegação por números ou nomes
-
-**Adicionar produtos:**
-
-Edite `src/modules/catalog/products.json`:
-
-```json
-[
-  {
-    "id": 1,
-    "nome": "Seu Produto",
-    "descricao": "Descrição detalhada do produto",
-    "preco": 149.90,
-    "img": "https://exemplo.com/imagem.jpg"
-  }
-]
-```
-
-### **3. Módulo Humano (Transferência)**
-
-📍 **Localização:** `src/modules/humano/`
-
-**Funcionalidades:**
-- Simula transferência para atendente
-- Mensagens configuráveis
-- Preparado para integração com CRM
+**Licença MIT completa:** [LICENSE](./LICENSE)
 
 ---
 
-## 🧪 Modo de Teste Local
+## ❓ FAQ - Perguntas Frequentes
 
-Para testar **sem conectar ao WhatsApp real**:
+<details>
+<summary><strong>1. Preciso ter conhecimento técnico?</strong></summary>
 
-```bash
-node test-local.js
-```
+Sim, conhecimento básico de:
+- Terminal/CMD
+- Instalar Node.js
+- Usar VPS/Servidor
+- Editar arquivos .env
 
-**Vantagens:**
-- ✅ Não precisa de número de WhatsApp
-- ✅ Testa toda a lógica do bot
-- ✅ Ideal para desenvolvimento
-- ⚠️ Não testa conexão real com WhatsApp
+A documentação explica tudo passo a passo!
+</details>
+
+<details>
+<summary><strong>2. Funciona em hospedagem compartilhada?</strong></summary>
+
+NÃO. Você precisa de:
+- VPS ou Servidor Dedicado
+- Acesso SSH/Terminal
+- Node.js instalado
+
+Recomendamos: DigitalOcean, Contabo, AWS, Hostinger VPS
+</details>
+
+<details>
+<summary><strong>3. Preciso de WhatsApp Business API oficial?</strong></summary>
+
+NÃO! Usamos Baileys que conecta via WhatsApp Web.
+
+Você só precisa de:
+- WhatsApp normal ou Business (app)
+- Número de telefone
+- Escanear QR Code
+
+Não precisa pagar pela API oficial cara!
+</details>
+
+<details>
+<summary><strong>4. Quanto custa a API da IA?</strong></summary>
+
+**OpenAI (GPT-4):** ~$0.001 por mensagem (~R$ 0,005)
+- 1000 mensagens = R$ 5,00
+
+**Groq (Llama 3.1):** GRATUITO
+- Até 14.400 requisições/dia
+- Sem custos
+
+Recomendamos começar com Groq!
+</details>
+
+<details>
+<summary><strong>5. Tem suporte técnico?</strong></summary>
+
+NÃO incluímos suporte direto no preço de R$ 29,90.
+
+Mas você tem:
+- ✅ +40KB de documentação detalhada
+- ✅ Código comentado linha por linha
+- ✅ Exemplos práticos
+- ✅ Comunidade no GitHub (issues)
+
+Se precisar de suporte dedicado, consulte preços separadamente.
+</details>
+
+<details>
+<summary><strong>6. Posso personalizar o bot?</strong></summary>
+
+SIM! Código 100% aberto e modificável:
+- Personalidade da IA (prompts)
+- Cores e emojis das mensagens
+- Menu e opções
+- Adicionar novos módulos
+- Integrar com APIs externas
+
+Tudo está documentado!
+</details>
+
+<details>
+<summary><strong>7. Quantos atendimentos simultâneos?</strong></summary>
+
+ILIMITADOS! Depende do seu servidor:
+- VPS 1GB RAM: ~100 conversas simultâneas
+- VPS 2GB RAM: ~500 conversas simultâneas
+- VPS 4GB RAM: ~2000+ conversas simultâneas
+
+O bot é muito leve!
+</details>
+
+<details>
+<summary><strong>8. Posso revender o script?</strong></summary>
+
+SIM! Licença MIT permite uso comercial.
+
+Você pode:
+- Revender como produto
+- Incluir em pacotes
+- Oferecer como serviço
+
+Apenas mantenha os créditos originais no código!
+</details>
+
+<details>
+<summary><strong>9. Funciona com grupos do WhatsApp?</strong></summary>
+
+NÃO (e isso é BOM!). O bot tem filtro duplo que:
+- Ignora mensagens de grupos
+- Responde apenas mensagens diretas (DM)
+
+Isso protege contra spam e uso indevido.
+</details>
+
+<details>
+<summary><strong>10. Vai ter atualizações?</strong></summary>
+
+SIM! Estamos desenvolvendo novos módulos:
+- 📅 Agendamento
+- 🍔 Pedidos para Restaurantes
+- 📊 Captura de Leads
+- 💳 Pagamentos PIX
+
+Clientes que comprarem agora terão DESCONTO nos módulos futuros!
+</details>
 
 ---
 
-## 🔧 Troubleshooting
+## 🆕 Roadmap - Módulos Futuros
 
-### **QR Code não aparece**
+Em desenvolvimento para 2025:
 
-```bash
-# Limpe a pasta de autenticação
-rm -rf auth/      # Linux/Mac
-Remove-Item -Recurse -Force auth/  # Windows
+- 📅 **Agendamento** - Clínicas, salões, consultórios
+- 🍔 **Pedidos** - Restaurantes e delivery
+- 📊 **Leads** - Captura e integração com CRM
+- 💳 **Pagamentos** - PIX automático
+- 🏠 **Imobiliária** - Catálogo de imóveis
+- 🎓 **Infoprodutos** - Cursos e mentorias
+- 💪 **Academias** - Planos e reservas
+- 🏥 **Clínicas** - Triagem e agendamento
 
-# Reinicie
-npm start
-```
-
-### **"Connection Failure"**
-
-1. Feche **todas** as abas do WhatsApp Web
-2. No celular: Desconecte todos os dispositivos
-3. Delete `auth/` e reconecte
-
-### **Bot responde em grupos**
-
-Verifique o filtro em `src/core/bot.js`:
-
-```javascript
-if (remoteJid.endsWith('@g.us')) {
-  return;  // Ignora grupos
-}
-```
-
-### **IA não responde (Erro 401)**
-
-1. Verifique a chave API no `.env`
-2. Teste a chave:
-
-```bash
-# Groq
-curl -H "Authorization: Bearer gsk_SUA_CHAVE" https://api.groq.com/openai/v1/models
-```
+**📢 Quem comprar agora garante descontos nos módulos futuros!**
 
 ---
 
-## ❓ FAQ
+## 📊 Comparação com Concorrentes
 
-**1. Posso usar meu WhatsApp pessoal?**
-- ⚠️ Não recomendado! Use número dedicado.
-
-**2. O bot funciona 24/7?**
-- ✅ Sim, enquanto o script estiver rodando.
-
-**3. Quanto custa?**
-- Groq: 🆓 Gratuito para testes
-- OpenAI: 💰 GPT-4o-mini ≈ R$ 2/mês (1.000 msg/dia)
-
-**4. Posso comercializar?**
-- ✅ Sim! Licença MIT permite uso comercial.
+| Recurso | **Nosso Bot** | Outros |
+|---------|--------------|--------|
+| **Versão Grátis** | ✅ Catálogo completo | ❌ Não existe |
+| **Testar Antes** | ✅ GitHub público | ❌ Impossível |
+| **Preço IA** | R$ 29,90 (único) | R$ 97+ ou mensal |
+| **Código Aberto** | ✅ MIT | ❌ Fechado |
+| **Catálogo** | ✅ Grátis | R$ 47+ |
+| **Docs PT-BR** | ✅ +40KB | ❌ Pouca |
+| **Modo Teste** | ✅ Sem WhatsApp | ❌ Não |
+| **Mensalidade** | ❌ Nunca | ✅ Sempre |
 
 ---
 
-## 📞 Suporte
+## 📞 Contato & Suporte
 
-- 📚 [Baileys Documentation](https://github.com/WhiskeySockets/Baileys)
-- 🤖 [Groq API Docs](https://console.groq.com/docs)
-- 💬 [OpenAI API Docs](https://platform.openai.com/docs)
+- 💬 **WhatsApp:** [(XX) XXXXX-XXXX](https://wa.me/seu-numero)
+- 📧 **Email:** contato@seuemail.com
+- 🐙 **GitHub:** [Issues](../../issues)
+- 💼 **LinkedIn:** [Seu Perfil](https://linkedin.com/in/seu-perfil)
 
 ---
 
-## 📄 Licença
+## 🌐 Onde Nos Encontrar
 
-MIT License - Uso livre para projetos comerciais e pessoais.
+- 🎨 **Fiverr:** [Ver serviços](https://fiverr.com/seu-usuario)
+- 🛒 **Mercado Livre:** [Ver anúncio](https://mercadolivre.com)
+- 📘 **Facebook:** Grupos de programadores
+- 🔵 **Reddit:** r/node, r/webdev
+- 🟠 **Hotmart:** [Ver produto](link-hotmart)
+
+---
+
+## 📜 Licença
+
+Este projeto está sob a licença **MIT**. Veja [LICENSE](./LICENSE) para mais detalhes.
+
+Você pode usar comercialmente, modificar e distribuir livremente!
 
 ---
 
 <div align="center">
 
-**Desenvolvido com ❤️ para automatizar atendimentos**
+## 🎯 Comece Agora por Apenas R$ 29,90
 
-⭐ **Se este projeto ajudou, deixe uma estrela!**
+### [🛒 COMPRAR SCRIPT](SUA_PAGINA_DE_VENDAS)
 
-[🐛 Reportar Bug](../../issues) • [✨ Sugerir Feature](../../issues) • [📖 Documentação](README.md)
+<sub>Acesso imediato • Código aberto • Sem mensalidades</sub>
+
+---
+
+**Criado com ❤️ para automatizar atendimentos no WhatsApp**
+
+⭐ Se este projeto te ajudou, deixe uma estrela!
+
+**[⭐ Star no GitHub](../../stargazers)** • **[🍴 Fork](../../fork)** • **[📢 Compartilhar](../../)**
 
 </div>

@@ -17,6 +17,12 @@ auth_info/
 *.json.bak
 *.session.json
 
+# Módulos PAGOS (NÃO COMMITAR - Repositório separado!)
+src/modules/ia/
+services/openai.js
+services/ollama.js
+handlers/iaHandler.js
+
 # Logs
 logs/
 *.log

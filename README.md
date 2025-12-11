@@ -2,16 +2,19 @@
 
 <div align="center">
 
-![GitHub stars](https://img.shields.io/github/stars/milenemolina/BotWhatsIA?style=social)
-![GitHub forks](https://img.shields.io/github/forks/milenemolina/BotWhatsIA?style=social)
-![Node.js](https://img.shields.io/badge/Node.js-18+-339933?logo=node.js&logoColor=white)
-![WhatsApp](https://img.shields.io/badge/WhatsApp-Bot-25D366?logo=whatsapp&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-blue)
-![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)
+![GitHub stars](https://img.shields.io/github/stars/milenemolina/BotWhatsIA?style=for-the-badge&logo=github)
+![GitHub forks](https://img.shields.io/github/forks/milenemolina/BotWhatsIA?style=for-the-badge&logo=github)
+![GitHub issues](https://img.shields.io/github/issues/milenemolina/BotWhatsIA?style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/milenemolina/BotWhatsIA?style=for-the-badge)
+
+![Node.js](https://img.shields.io/badge/Node.js-18+-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![WhatsApp](https://img.shields.io/badge/WhatsApp-Bot-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
 
 **Automatize seu atendimento no WhatsApp com Inteligência Artificial** 🚀
 
-[🛒 Comprar Agora](#-como-comprar) • [📖 Documentação](#-funcionalidades) • [💡 Demo](#-demonstração)
+[🛒 Comprar Agora](#-como-comprar) • [📖 Documentação](#-índice) • [💡 Demo](#-demonstração) • [🚀 Quick Start](QUICKSTART.md)
 
 </div>
 
@@ -36,7 +39,7 @@
 ### ✨ Principais Características
 
 - 📦 **Catálogo Digital** com imagens e preços ✅ **GRÁTIS**
-- 🤖 **IA Conversacional** (GPT-4 ou Llama 3.1) � **R$ 29,90**
+- 🤖 **IA Conversacional** (GPT-4 ou Llama 3.1) 💎 **R$ 29,90**
 - 🎛️ **Menu Interativo** inteligente ✅ **GRÁTIS**
 - 🔄 **Transferência para Humano** quando necessário ✅ **GRÁTIS**
 - 🛡️ **Filtro Anti-Grupos** automático ✅ **GRÁTIS**
@@ -45,7 +48,40 @@
 
 ---
 
-## 🚀 Funcionalidades
+## 🛠️ Stack Tecnológica
+
+<div align="center">
+
+| Categoria | Tecnologias |
+|-----------|-------------|
+| **Runtime** | ![Node.js](https://img.shields.io/badge/Node.js-18+-339933?logo=node.js&logoColor=white) ![JavaScript](https://img.shields.io/badge/ES6+-F7DF1E?logo=javascript&logoColor=black) |
+| **WhatsApp** | ![Baileys](https://img.shields.io/badge/Baileys-v6.7-25D366?logo=whatsapp&logoColor=white) |
+| **IA (Opcional)** | ![OpenAI](https://img.shields.io/badge/GPT--4-412991?logo=openai&logoColor=white) ![Ollama](https://img.shields.io/badge/Llama_3.1-8A2BE2?logo=meta&logoColor=white) |
+| **Logging** | ![Pino](https://img.shields.io/badge/Pino-Logger-blue) |
+| **Ambiente** | ![dotenv](https://img.shields.io/badge/.env-Config-ECD53F?logo=.env&logoColor=black) |
+
+</div>
+
+---
+
+## � Por que usar este bot?
+
+<div align="center">
+
+| 🎯 Benefício | 📊 Impacto |
+|-------------|-----------|
+| **Automação 24/7** | Atende clientes mesmo fora do horário comercial |
+| **Redução de Custos** | Elimina necessidade de múltiplos atendentes |
+| **Respostas Instantâneas** | Catálogo sempre disponível sem espera |
+| **Escalabilidade** | Atende múltiplos clientes simultaneamente |
+| **Profissionalismo** | Padroniza o atendimento da sua empresa |
+| **Código Aberto** | Personalize 100% do código |
+
+</div>
+
+---
+
+## �🚀 Funcionalidades
 
 ### 📦 **Catálogo de Produtos Completo** ✅ GRÁTIS
 
@@ -86,6 +122,23 @@
 - **OpenAI / Groq** - IAs de última geração
 - **ES Modules** - Código limpo e atual
 - **Pino Logger** - Logs profissionais estruturados
+
+---
+
+## 🎯 Casos de Uso
+
+<div align="center">
+
+| 🏪 Setor | 📋 Aplicação |
+|----------|-------------|
+| **E-commerce** | Catálogo de produtos, vendas automatizadas |
+| **Restaurantes** | Cardápio digital, pedidos por WhatsApp |
+| **Consultoria** | FAQ automático, agendamento de reuniões |
+| **Suporte Técnico** | Respostas rápidas, triagem de tickets |
+| **Imobiliárias** | Listagem de imóveis, informações 24/7 |
+| **Eventos** | Informações, inscrições, confirmações |
+
+</div>
 
 ---
 
